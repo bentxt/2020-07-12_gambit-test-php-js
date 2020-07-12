@@ -44,9 +44,11 @@ run_php: linked_app.php
 clean:
 	rm -f lib.js app.js app_.js linked_app.js
 	rm -f lib.php app.php app_.php linked_app.php
-	#rm -f *.php
+
+distclean: clean
+	rm -f *.tar.gz
 	rm -f *.html
 
 doc: 
-	pandoc -s Article.txt > Article.html
+	pandoc -s article.md > article.html
 
